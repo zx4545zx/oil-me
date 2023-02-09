@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Horoscope">
+  <meta name="apple-mobile-web-app-orientations" content="portrait-any">
+  <link rel="shortcut icon" sizes="196x196" href="/images/logo.jpeg">
+  <link rel="apple-touch-icon" href="/images/logo.jpeg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/logo.jpeg" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <nav class="navbar has-shadow mb-5" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 class="title">PTT OIL PRICE</h1>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container pb-5">
+    <% oil.forEach((d)=> { %>
+      <div class="box">
+        <article class="media">
+          <div class="media-content">
+            <div class="content is-flex is-justify-content-space-between">
+              <h1 class="title m-0">
+                <%= d.name %>
+              </h1>
+              <h1 class="title m-0">
+                <%= d.price %>
+              </h1>
+            </div>
+          </div>
+        </article>
+      </div>
+      <% }) %>
+  </div>
+</body>
+
+</html>
